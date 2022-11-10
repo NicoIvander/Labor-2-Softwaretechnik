@@ -3,7 +3,7 @@
 using namespace std;
 
 #define OK 0
-#define ERROR "1"
+#define ERROR "Fehlermeldung"
 
 enum MONTH { JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC };
 

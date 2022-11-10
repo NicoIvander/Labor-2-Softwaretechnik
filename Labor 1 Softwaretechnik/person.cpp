@@ -25,27 +25,27 @@ string Person::surname()
 }
 void Person::setDob(unsigned int dd, MONTH mm, int yyyy)
 {
-	_dob.day = dd;
-	_dob.month = mm;
-	_dob.year = yyyy;
 
 	if ((mm == APR || mm == JUN || mm == SEP || mm == NOV) && (dd >= 31))
 	{
 		throw exception(ERROR);
 	}
-	else if ((mm == JAN || mm == MAR || mm == MAY || mm == JUL || mm = AUG || mm == OCT || mm == DEC) && dd > 31)
+	else if ((mm == JAN || mm == MAR || mm == MAY || mm == JUL || mm == AUG || mm == OCT || mm == DEC) && (dd > 31))
 	{
 		throw exception(ERROR);
-
+	}
+	else if ((mm == FEB) && dd > 29)
+	{
+		throw exception(ERROR);
 	}
 	else
 	{
-		Date D;
-		D.day = dd;
-		D.year = yyyy;
-		D.month = mm;
+		_dob.day = dd;
+		_dob.month = mm;
+		_dob.year = yyyy;
 	}
 }
+
 Date Person::dob()
 {
 	Date D;

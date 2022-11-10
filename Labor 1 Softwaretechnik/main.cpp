@@ -26,7 +26,7 @@ void main()
 	
 	try
 	{
-		aPerson.setDob(40, FEB, 1998);
+		aPerson.setDob(28, FEB, 1999);
 
 		print(aPerson);
 		cout << OK;
